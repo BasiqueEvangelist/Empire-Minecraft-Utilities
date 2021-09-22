@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "emcutils",
-  "version": "2.3.1-SNAPSHOT",
+  "version": "3.0.0-alpha.build.1",
   "name": "Empire Minecraft Utilities",
   "description": "A collection of various utilities for the Empire Minecraft server.",
   "authors": [
@@ -35,10 +35,12 @@
     "fabric-api-base": "*",
     "fabric-item-api-v1": "*",
     "fabric-networking-api-v1": "*",
-    "minecraft": "~1.17.1"
+    "minecraft": ">=1.18-alpha.21.37.a"
+  },
+  "recommends": {
+    "modmenu": ">=2.1.0"
   },
   "suggests": {
-    "modmenu": ">=2.0.9",
     "voxelmap": ">=1.10.15",
     "xaeroworldmap": ">=1.17.0",
     "xaerominimap": ">=21.16.0"
