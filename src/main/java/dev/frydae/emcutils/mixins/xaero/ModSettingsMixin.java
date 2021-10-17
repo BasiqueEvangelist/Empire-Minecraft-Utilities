@@ -26,9 +26,7 @@
 package dev.frydae.emcutils.mixins.xaero;
 
 import dev.frydae.emcutils.utils.Util;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Pseudo;
+import org.spongepowered.asm.mixin.*;
 import xaero.common.settings.ModSettings;
 
 import static xaero.common.settings.ModSettings.serverSettings;
@@ -40,6 +38,9 @@ import static xaero.common.settings.ModSettings.serverSettings;
 @Pseudo
 @Mixin(ModSettings.class)
 public class ModSettingsMixin {
+
+  @Shadow private boolean entityRadar = !Util.isOnEMC;
+
   /**
    * @reason Force cave maps off on EMC
    * @author wafflecoffee
